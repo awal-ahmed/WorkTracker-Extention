@@ -2,9 +2,9 @@
     /*center the container*/ width: 700px; margin: 0 auto; }
     #Name { /* For Later Use */ }
     #Age { /* For Later Use */ }
-    #namesTable tr:nth-child(even) { background: dimgray;}
+    #namesTable tr:nth-child(even) { background: dimgray; color: white;}
     #namesTable tr:nth-child(odd) { background: lightgray;}
-    #namesTable th { margin-top: 50px; background: royalblue; }
+    #namesTable th { margin-top: 50px; background: royalblue; color: white; }
     #namesTable { width: 100%; border-collapse: separate; empty-cells: show; text-align: center;}
     #namesTable tr { /*display:block;*/ min-height:20px; }
     #addNew { position: relative; display: flex;}

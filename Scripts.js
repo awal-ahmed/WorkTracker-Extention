@@ -18,7 +18,6 @@ function onEdit(buttonId) {
     
     taskArray.map(eachTask => {
         if (eachTask.id == buttonId){
-            console.log(eachTask)
             document.getElementById('TaskName').value = eachTask.taskName; 
             document.getElementById('Priority').value = eachTask.priority;
             document.getElementById('Progress').value = eachTask.progress;
@@ -44,9 +43,20 @@ function onDetailsShow(buttonId) {
     
     taskArray.map(eachTask => {
         if (eachTask.id == buttonId){
-            console.log(eachTask)
+            priority = 0
+            showPriority = document.getElementById('showPriority')
+            if (eachTask.priority==1){
+                showPriority.textContent = "High";
+                showPriority.style.color = "red"
+            } else if (eachTask.priority==2) {
+                showPriority.textContent = "Medium";
+                showPriority.style.color = "blue"
+            } else {
+                showPriority.textContent = "Low";
+                showPriority.style.color = "green"
+            }
             document.getElementById('showTaskName').textContent = eachTask.taskName; 
-            document.getElementById('showPriority').textContent = eachTask.priority;
+            // document.getElementById('showPriority').textContent = eachTask.priority;
             document.getElementById('showProgress').textContent = eachTask.progress;
             document.getElementById('showStartDate').textContent = eachTask.startDate; 
             document.getElementById('showEndDate').textContent = eachTask.endDate;

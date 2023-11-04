@@ -5,9 +5,25 @@
     #namesTable tr:nth-child(even) { background: dimgray;}
     #namesTable tr:nth-child(odd) { background: lightgray;}
     #namesTable th { margin-top: 50px; background: royalblue; }
-    #namesTable { width: 100%; border-collapse: separate; empty-cells: show; }
+    #namesTable { width: 100%; border-collapse: separate; empty-cells: show; text-align: center;}
     #namesTable tr { /*display:block;*/ min-height:20px; }
-    #addNew { position: relative;}
+    #addNew { position: relative; display: flex;}
     #addNew .testButton { right: 0;}
     #counterDiv { float: right; padding-bottom: 10px; }
     #counter { float: right; border: none; width: 30px; }
+
+    .note{
+        display: flex;
+        align-items: center;
+    }
+
+    .showExisting{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .taskNameCol{
+        width: 60%;
+    }
+

@@ -6,30 +6,12 @@
     
     <body> 
         <div id="container"> 
-            <div id="uiContainer"> 
-                Full Name : <input id="Name" type="text" name="Name"> 
-                Age : <input id="Age" type="number" name="Age">
-    
-                <button id="myButton">Add</button>
-                
-                <table id="namesTable"> 
-                    <tr> 
-                        <th>First Name</th> 
-                        <th>Last Name</th> 
-                        <th>Age</th> </tr> <tr>
-                    </tr> 
-                </table> 
-            </div>
-            
-            <div id="counterDiv"> 
-                Total Records : <input id="counter" type="number" value="0" readonly>
-            </div>
 
             <div id="uiContainer"> 
                 
                 <table id="namesTable"> 
                     <tr> 
-                        <th>Task Name</th> 
+                        <th class="taskNameCol">Task Name</th> 
                         <th>Remaining Days</th> 
                         <th>Action</th> 
                     </tr> 
@@ -46,14 +28,33 @@
 
             <div id="addNew" style="display: none">
                 <div>Task Name : <input id="TaskName" type="text" name="Task Name" value=""> </div>
-                <div>Priority : <input id="Priority" type="number" name="Priority" value=0></div>
-                <div>Progress : <input id="Progress" type="number" name="Progress" value=0> </div>
+                <div>Priority : <select name="cars" id="Priority">
+                    <option value=1>High</option>
+                    <option value=2>Medium</option>
+                    <option value=3>Low</option>
+                  </select>
+                </div>
+                <div>Progress : <input id="Progress" type="number" name="Progress" value=0  min="0" max="100"> </div>
                 <div>Start Date : <input id="StartDate"  type="date" value="2023-01-01" /></div>
-                <div>End Date : <input id="EndDate"  type="date" value="2023-01-01" /></div>
+                <div>End Date : <input id="EndDate"  type="date" value="2024-01-01" /></div>
+                <div>Assigned By : <input id="AssignedBy" type="text" name="Assigned By" value=""> </div>
+                <div class="note">Note :<textarea id="Note" name="Note" rows="4" cols="50" value="">
+                    </textarea></div>
+                    
+                <button class="cancelButton" id="cancelButton">Cancel</button>
                 <button class="testButton" id="testButton">Save</button>
             </div>
 
-            <!-- <button id="testButton">Test</button> -->
+            <div id="showExisting" style="display: none; flex-direction: column; align-items: center;">
+                <div><b>Task Name:</b> <span id="showTaskName"> </span> </div>
+                <div><b>Priority:</b> <span id="showPriority"> </span></div>
+                <div><b>Progress:</b> <span id="showProgress"> </span> </div>
+                <div><b>Start Date: </b><span id="showStartDate"> </span> </div>
+                <div><b>End Date: </b><span id="showEndDate"> </span></div>
+                <div><b>Assigned By: </b><span id="showAssignedBy"> </span></div>
+                <div class="note"><b>Note: </b><span id="showNote"> </span></div>
+                <button class="cancelButton" id="hideDetails">Hide</button>
+            </div>
         
         </div>
         <script src="Scripts.js"></script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>UI Demo</title>
+
+    <link href="Styles.css" rel="stylesheet" type="text/css">
+    
+    </head> 
+    
+    <body> 
+        <div id="container"> 
+            <div id="uiContainer"> 
+                Full Name : <input id="Name" type="text" name="Name"> 
+                Age : <input id="Age" type="number" name="Age">
+    
+                <button id="myButton">Add</button>
+                
+                <table id="namesTable"> 
+                    <tr> 
+                        <th>First Name</th> 
+                        <th>Last Name</th> 
+                        <th>Age</th> </tr> <tr>
+                    </tr> 
+                </table> 
+            </div>
+            
+            <div id="counterDiv"> 
+                Total Records : <input id="counter" type="number" value="0" readonly>
+            </div>
+
+            <div id="uiContainer"> 
+                
+                <table id="namesTable"> 
+                    <tr> 
+                        <th>Task Name</th> 
+                        <th>Remaining Days</th> 
+                        <th>Action</th> 
+                    </tr> 
+                    <tr>
+                    </tr> 
+                </table> 
+            </div>
+            
+            <div id="counterDiv"> 
+                Total Records : <input id="counter" type="number" value="0" readonly>
+            </div>
+
+            <button id="showAddButton"  name="Task Name">Add New</button>
+
+            <div id="addNew" style="display: none">
+                <div>Task Name : <input id="TaskName" type="text" name="Task Name" value=""> </div>
+                <div>Priority : <input id="Priority" type="number" name="Priority" value=0></div>
+                <div>Progress : <input id="Progress" type="number" name="Progress" value=0> </div>
+                <div>Start Date : <input id="StartDate"  type="date" value="2023-01-01" /></div>
+                <div>End Date : <input id="EndDate"  type="date" value="2023-01-01" /></div>
+                <button class="testButton" id="testButton">Save</button>
+            </div>
+
+            <!-- <button id="testButton">Test</button> -->
+        
+        </div>
+        <script src="Scripts.js"></script>
+    
+    </body> </html>;

@@ -6,9 +6,15 @@ var detailsArea = document.getElementById("showExisting");
 function onDelete(buttonId) {
     let newJson = window.localStorage.getItem("taskStore");
     var taskArray = JSON.parse(newJson) || []
-    var newTaskArray = taskArray.filter(eachTask => eachTask.id != buttonId)
-    window.localStorage.setItem("taskStore", JSON.stringify(newTaskArray));
-    createTable()
+    var newTaskArray = taskArray.filter(eachTask => eachTask.id == buttonId)
+    var text = "Do you want to delete: " + newTaskArray[0].taskName
+
+    if (confirm(text) == true) {
+        var newTaskArray = taskArray.filter(eachTask => eachTask.id != buttonId)
+        window.localStorage.setItem("taskStore", JSON.stringify(newTaskArray));
+        createTable()
+    }
+    
 }
 
 function onEdit(buttonId) {

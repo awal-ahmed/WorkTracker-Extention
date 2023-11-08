@@ -56,14 +56,11 @@ function onDetailsShow(buttonId) {
                 showPriority.style.color = "green"
             }
             document.getElementById('showTaskName').textContent = eachTask.taskName; 
-            // document.getElementById('showPriority').textContent = eachTask.priority;
-            document.getElementById('showProgress').textContent = eachTask.progress;
+            document.getElementById('showProgress').textContent = eachTask.progress+" %";
             document.getElementById('showStartDate').textContent = eachTask.startDate; 
             document.getElementById('showEndDate').textContent = eachTask.endDate;
             document.getElementById('showAssignedBy').textContent = eachTask.assignedBy;
             document.getElementById('showNote').textContent = eachTask.note;
-
-            selectedTask= eachTask.id;
         }
     })
 
@@ -92,7 +89,7 @@ function createTable() {
     }
 
     newTaskArray.sort(function (a, b) {
-        return a.priority - b.priority || new Date(a.endDate) - new Date(b.endDate);
+        return a.priority - b.priority || new Date(a.endDate) - new Date(b.endDate) || a.progress - b.progress;
     });
 
     newTaskArray.map(eachTask => {

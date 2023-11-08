@@ -27,32 +27,67 @@
             <button id="showAddButton"  name="Task Name">Add New</button>
 
             <div id="addNew" style="display: none">
-                <div>Task Name : <input id="TaskName" type="text" name="Task Name" value=""> </div>
-                <div>Priority : <select name="cars" id="Priority">
-                    <option value=1>High</option>
-                    <option value=2>Medium</option>
-                    <option value=3>Low</option>
-                  </select>
-                </div>
-                <div>Progress : <input id="Progress" type="number" name="Progress" value=0  min="0" max="100"> </div>
-                <div>Start Date : <input id="StartDate"  type="date" value="2023-01-01" /></div>
-                <div>End Date : <input id="EndDate"  type="date" value="2024-01-01" /></div>
-                <div>Assigned By : <input id="AssignedBy" type="text" name="Assigned By" value=""> </div>
-                <div class="note">Note :<textarea id="Note" name="Note" rows="4" cols="50" value="">
-                    </textarea></div>
-                    
-                <button class="cancelButton" id="cancelButton">Cancel</button>
-                <button class="testButton" id="testButton">Save</button>
+                <table id="insertTable"> 
+                    <tr>
+                        <td><b class="text_area">Task Name:</b></td> 
+                        <td><input class="round_class" id="TaskName" type="text" name="Task Name" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><b>Priority:</b></td>
+                        <td> <select class="round_class" name="cars" id="Priority">
+                            <option value=1>High</option>
+                            <option value=2>Medium</option>
+                            <option value=3>Low</option>
+                          </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Progress:</b></td>
+                        <td> <input id="Progress"  class="round_class" type="number" name="Progress" value=0  min="0" max="100"> </td>
+                    </tr>
+                    <tr>
+                        <td><b>Start Date:</b></td>
+                        <td> <input id="StartDate" class="round_class"  type="date" value="2023-01-01" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>End Date:</b> </td>
+                        <td><input id="EndDate" class="round_class" type="date" value="2024-01-01" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Assigned By:</b></td>
+                        <td> <input id="AssignedBy"  class="round_class" type="text" name="Assigned By" value=""> </td>
+                    </tr>
+                    <tr>
+                        <td class="note"><b>Note:</b></td>
+                        <td>
+                            <textarea id="Note" class="round_class" name="Note" rows="4" cols="50" value="">
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                    <td class="right_alignment"> <button class="cancelButton" id="cancelButton">Cancel</button>
+                    <button class="testButton" id="testButton">Save</button></td>
+                    </tr>
+                
+                </table> 
+                
+               
+                
+               
+                
+                
             </div>
 
             <div id="showExisting" style="display: none; flex-direction: column; align-items: center;">
-                <div><b>Task Name:</b> <span id="showTaskName"> </span> </div>
-                <div><b>Priority:</b> <span id="showPriority"> </span></div>
-                <div><b>Progress:</b> <span id="showProgress"> </span> </div>
-                <div><b>Start Date: </b><span id="showStartDate"> </span> </div>
-                <div><b>End Date: </b><span id="showEndDate"> </span></div>
-                <div><b>Assigned By: </b><span id="showAssignedBy"> </span></div>
-                <div class="note"><b>Note: </b><span id="showNote"> </span></div>
+                <div class="round_class"><b>Task Name:</b> <span id="showTaskName"> </span> </div>
+                <div class="round_class"><b>Priority:</b> <span id="showPriority"> </span></div>
+                <div class="round_class"><b>Progress:</b> <span id="showProgress"> </span> </div>
+                <div class="round_class"><b>Start Date: </b><span id="showStartDate"> </span> </div>
+                <div class="round_class"><b>End Date: </b><span id="showEndDate"> </span></div>
+                <div class="round_class"><b>Assigned By: </b><span id="showAssignedBy"> </span></div>
+                <div class="div_note" ><b>Note: </b><span id="showNote"> </span></div>
                 <button class="cancelButton" id="hideDetails">Hide</button>
             </div>
         

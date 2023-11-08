@@ -7,14 +7,22 @@
     #namesTable th { margin-top: 50px; background: royalblue; color: white; }
     #namesTable { width: 100%; border-collapse: separate; empty-cells: show; text-align: center;}
     #namesTable tr { /*display:block;*/ min-height:20px; }
-    #addNew { position: relative; display: flex;}
+    #addNew { position: relative; margin-left: 100px;}
     #addNew .testButton { right: 0;}
     #counterDiv { float: right; padding-bottom: 10px; }
     #counter { float: right; border: none; width: 30px; }
+    #showAddButton {margin-left: 35px; margin-top: 10px;}
 
     .note{
+        vertical-align: middle;
+    }
+
+    .div_note{
         display: flex;
         align-items: center;
+
+        border-radius: 20px;
+        margin: 5px;
     }
 
     .showExisting{
@@ -27,3 +35,15 @@
         width: 60%;
     }
 
+    .round_class{
+        border-radius: 20px;
+        margin: 5px;
+    }
+
+    .text_area{
+        width: 90px;
+    }
+
+    .right_alignment{
+        text-align: right;
+    }

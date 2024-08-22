@@ -105,7 +105,7 @@ function createTable() {
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
         var row = table.insertRow(); 
 
-        var cell1 = row.insertCell(0); var cell2 = row.insertCell(1); var cell3 = row.insertCell(2);
+        var cell1 = row.insertCell(0); var cell2 = row.insertCell(1); var cell3 = row.insertCell(2); var cell4 = row.insertCell(3);
 
         var editButton = document.createElement("button");
         editButton.innerHTML = '<img src="./Images/edit.png" width="10" height="10" alt="Edit"/>';
@@ -130,10 +130,10 @@ function createTable() {
 
         cell1.innerHTML = eachTask.taskName; 
         cell2.innerHTML = diffDays; 
-        cell3.appendChild(editButton);
-        cell3.appendChild(detailsButton);
-
-        cell3.appendChild(deleteButton);
+        cell3.innerHTML = eachTask.assignedBy; 
+        cell4.appendChild(editButton);
+        cell4.appendChild(detailsButton);
+        cell4.appendChild(deleteButton);
 
         countRows++; 
 

@@ -154,6 +154,9 @@ function showAddSection() {
     if (x.style.display === "none") {
         x.style.display = "block";
         changeText.textContent = "Hide";
+        const date1 = new Date();
+        document.getElementById('StartDate').value = date1.toLocaleString(); 
+        document.getElementById('EndDate').value = date1.toLocaleString();
     } else {
         x.style.display = "none";
         changeText.textContent = "Add New";
@@ -221,8 +224,8 @@ function onCancel() {
     document.getElementById('TaskName').value = ""; 
     document.getElementById('Priority').value = 1;
     document.getElementById('Progress').value = 0;
-    document.getElementById('StartDate').value = '2023-01-01'; 
-    document.getElementById('EndDate').value = '2024-01-01';
+    document.getElementById('StartDate').value = new Date(); 
+    document.getElementById('EndDate').value = new Date();
     document.getElementById('AssignedBy').value = "";
     document.getElementById('Note').value = "";
 
